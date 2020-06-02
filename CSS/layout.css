@@ -1,0 +1,22 @@
+section#a {
+  height: 100px;
+  width: 100%;
+}
+
+section#b {
+  float: left;
+  height: 600px;
+  width: 200px; 
+}
+
+@media only screen and (max-width: 768px) {
+  section#a {
+    height: 75px;
+    width: 100%;
+  }
+
+  section#b {
+    height: 150px;
+    width: 100%; 
+  }
+}
