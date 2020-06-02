@@ -1,0 +1,112 @@
+#flexbox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.flex-top {
+  height: 200px;
+  width: 380px;
+}
+
+.flex-middle {
+  height: 250px;
+  width: 190px;
+}
+
+.flex-bottom {
+  height: 150px;
+  width: 760px;
+}
+
+#a {
+  background-color: orangered;
+}
+
+#b {
+  background-color: skyblue;
+}
+
+#c {
+  background-color: mediumspringgreen;
+}
+
+#d {
+  background-color: darkorchid;
+}
+
+#e {
+  background-color: darkolivegreen;
+}
+
+#f {
+  background-color: cornflowerblue;
+}
+
+#g {
+  background-color: sienna;
+}
+
+#h {
+  background-color: maroon;
+}
+
+#i {
+  background-color: limegreen;
+}
+
+@media only screen and (max-width: 768px) {
+  #flexbox {
+    clear: both;
+  }
+
+  .flex-top {
+    height: 125px;
+    width: 100%;
+  }
+
+  .flex-middle {
+    height: 250px;
+    width: 50%;
+  }
+
+  .flex-bottom {
+    height: 80px;
+  }
+
+  #a {
+    background-color: tomato;
+  }
+  
+  #b {
+    background-color: rgb(39, 27, 204);
+  }
+  
+  #c {
+    background-color: rgb(224, 218, 47);
+  }
+  
+  #d {
+    background-color: rgb(11, 95, 32);
+  }
+  
+  #e {
+    background-color: rgb(207, 66, 113);
+  }
+  
+  #f {
+    background-color: rgb(21, 134, 115);
+  }
+  
+  #g {
+    background-color: rgb(218, 82, 19);
+  }
+  
+  #h {
+    background-color: rgb(46, 79, 187);
+  }
+  
+  #i {
+    background-color: rgb(134, 221, 19);
+  }
+}
