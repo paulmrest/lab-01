@@ -1,38 +1,32 @@
-#flexbox {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.flex-top {
-  height: 200px;
-  width: 380px;
-}
-
-.flex-middle {
-  height: 250px;
-  width: 190px;
-}
-
-.flex-bottom {
-  height: 150px;
-  width: 760px;
+main {
+  display: grid;
+  grid-template-columns: 1fr 0.95fr 0.95fr 0.95fr 0.95fr;
+  grid-template-rows: 1fr 2fr 2.5fr 1.5fr;
 }
 
 #a {
   background-color: orangered;
+  grid-column: span 5;
 }
 
 #b {
   background-color: skyblue;
+  grid-row: span 3;
 }
 
 #c {
   background-color: mediumspringgreen;
+  grid-column: span 2;
 }
 
 #d {
   background-color: darkorchid;
+  grid-column: span 2;
+}
+
+#i {
+  background-color: limegreen;
+  grid-column: span 4;
 }
 
 #e {
@@ -51,35 +45,70 @@
   background-color: maroon;
 }
 
-#i {
-  background-color: limegreen;
-}
-
-@media only screen and (max-width: 768px) {
-  #flexbox {
-    clear: both;
-  }
-
-  .flex-top {
-    height: 125px;
-    width: 100%;
-  }
-
-  .flex-middle {
-    height: 250px;
-    width: 50%;
-  }
-
-  .flex-bottom {
-    height: 80px;
+@media only screen and (max-width: 960px) {
+  main {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1.5fr 2.5fr 2.5fr 1.25fr;
   }
 
   #a {
-    background-color: tomato;
+    background-color: rgb(223, 99, 99);
+    grid-column: span 4;
+  }
+
+  #b {
+    background-color: rgb(224, 218, 47);
+    grid-column: 1 / span 4;
+    grid-row: 2 / span 1;
+  }
+
+  #c {
+    background-color: rgb(12, 145, 21);
+  }
+
+  #d {
+    background-color: rgb(230, 67, 67);
+  }
+  
+  #e {
+    background-color: rgb(185, 33, 16);
+  }
+  
+  #f {
+    background-color: rgb(17, 75, 222);
+  }
+  
+  #g {
+    background-color: rgb(75, 218, 82);
+  }
+  
+  #h {
+    background-color: rgb(179, 79, 212);
+  }
+  
+  #i {
+    background-color: rgb(33, 212, 182);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1.5fr 2.5fr 2.5fr repeat(5, 1.25fr);
+  }
+  
+  #a, #c, #d, #i {
+    grid-column: 1 / span 1;
   }
   
   #b {
     background-color: rgb(39, 27, 204);
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+  }
+
+  #a {
+    background-color: tomato;
   }
   
   #c {
